@@ -93,7 +93,7 @@ function lib:Window(text, preset, closebind)
     local Main = Instance.new("Frame")
     local TabHold = Instance.new("Frame")
     local TabHoldLayout = Instance.new("UIListLayout")
-    local Title = Instance.new("TextLabel")
+    local Title = Instance.new("Text")
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
 
@@ -1383,7 +1383,7 @@ function lib:Window(text, preset, closebind)
             LabelTitle.Text = text
             LabelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             LabelTitle.TextSize = 14.000
-            LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
+            LabelTitle.TextXAlignment = Enum.TextXAlignment.Center
             
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
