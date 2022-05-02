@@ -1368,6 +1368,7 @@ function lib:Window(text, preset, closebind)
             Label.Text = ""
             Label.TextColor3 = Color3.fromRGB(0, 0, 0)
             Label.TextSize = 14.000
+            Label.BackgroundTransparency = 1
 
             LabelCorner.CornerRadius = UDim.new(0, 5)
             LabelCorner.Name = "ButtonCorner"
@@ -1383,7 +1384,7 @@ function lib:Window(text, preset, closebind)
             LabelTitle.Text = text
             LabelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             LabelTitle.TextSize = 14.000
-            LabelTitle.TextXAlignment = Enum.TextXAlignment.Center
+            LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
             
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
         end
