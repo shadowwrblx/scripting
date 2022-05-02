@@ -1,4 +1,3 @@
---[[ all credits goes to vep#1003 ]]--
 local lib = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -93,7 +92,7 @@ function lib:Window(text, preset, closebind)
     local Main = Instance.new("Frame")
     local TabHold = Instance.new("Frame")
     local TabHoldLayout = Instance.new("UIListLayout")
-    local Title = Instance.new("Text")
+    local Title = Instance.new("TextLabel")
     local TabFolder = Instance.new("Folder")
     local DragFrame = Instance.new("Frame")
 
