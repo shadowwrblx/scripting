@@ -1,4 +1,4 @@
--- [[ creds to Vep#1003 ]] --
+-- [[ creds to Vep#1003 - modified by me ]] --
 local lib = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
