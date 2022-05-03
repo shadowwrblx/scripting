@@ -1,4 +1,5 @@
--- [[ creds to Vep#1003 - modified by shadow.#9999 ]] --
+local a,e = pcall(function()
+-- [[ creds to Vep#1003 ]] --
 local lib = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -152,10 +153,8 @@ function lib:Window(text, preset, closebind)
                     Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
                     uitoggled = true
                     wait(.5)
-                    knixhub.Enabled = false
                 else
                     Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
-                    knixhub.Enabled = true
                     uitoggled = false
                 end
             end
@@ -1597,4 +1596,14 @@ function lib:Window(text, preset, closebind)
     end
     return tabhold
 end
-return lib
+local list = {"yes","no","idk"}
+local win = lib:Window("xeri - prison life",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+local combat = win:Tab("Combat")
+combat:Label("Combat")
+local dropdown = combat:Dropdown("g",list,function(val)
+    print(val)
+end)
+list = {"yes"}
+dropdown:refresh(list)
+end)
+print(a,e)
