@@ -845,7 +845,7 @@ function lib:Window(text, preset, closebind)
                 end
                 droptog = not droptog
             end)
-            function dropdownlib:refresh(table)
+            function dropdownlib:Refresh(table)
                 framesize = 0
                 itemcount = 0
                 for _,g in next, DropItemHolder:GetChildren() do 
