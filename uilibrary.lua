@@ -1,5 +1,4 @@
-local a,e = pcall(function()
--- [[ creds to Vep#1003 ]] --
+-- [[ creds to Vep#1003 - modified my shadow.#9999]] --
 local lib = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
@@ -1596,14 +1595,4 @@ function lib:Window(text, preset, closebind)
     end
     return tabhold
 end
-local list = {"yes","no","idk"}
-local win = lib:Window("xeri - prison life",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
-local combat = win:Tab("Combat")
-combat:Label("Combat")
-local dropdown = combat:Dropdown("g",list,function(val)
-    print(val)
-end)
-list = {"yes"}
-dropdown:refresh(list)
-end)
-print(a,e)
+return lib
