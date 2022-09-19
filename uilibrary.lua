@@ -1459,6 +1459,7 @@ function lib:Window(text, preset, closebind)
             function textLib:Refresh(textupd)
                 LabelTitle.Text = textupd
             end
+            return textLib
         end
         function tabcontent:Textbox(text,disapper, callback)
             local Textbox = Instance.new("Frame")
