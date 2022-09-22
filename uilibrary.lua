@@ -1529,13 +1529,11 @@ function lib:Window(text, preset, closebind)
             TextBox.FocusLost:Connect(
                 function(ep)
                     if ep then
-                        if #TextBox.Text > 0 then
                             pcall(callback, TextBox.Text)
                             if disapper then
                                 TextBox.Text = ""
                             end
                         end
-                    end
                 end
             )
             Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
