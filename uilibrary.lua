@@ -843,6 +843,21 @@ function lib:Window(text, preset, closebind)
                 end
                 droptog = not droptog
             end)
+            function dropdownlib:Find(thing)
+                local searchtext = string.lower(thing)
+                for i,v in next, DropItemHolder:GetChildren() do
+                    if v:IsA("TextButton") then
+                        local item = string.lower(v.Text)
+                        if string.find(item, searchtext) then
+                            v.Visible = true
+                        else
+                            v.Visible = false
+                        end
+                    end
+                end
+                Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
+                DropItemHolder.CanvasSize = UDim2.new(0, 0, 0, DropLayout.AbsoluteContentSize.Y)
+            end
             function dropdownlib:Refresh(table)
                 framesize = 0
                 itemcount = 0
